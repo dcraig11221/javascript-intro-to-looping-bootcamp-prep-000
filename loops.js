@@ -1,32 +1,30 @@
-var myArray = []
-function forLoop(myArray) {
-	for (i = 0; i < 25; i++) {
-		if (i < 1) {
-			myArray.push(`I am 1 strange loop.`)
-		}
-		else {
-			myArray.push(`I am ${i} strange loops.`)
-		}
-	}	return myArray
-}
-
-function whileLoop(number) {
-	while (number > 0) {
-		console.log(number)
-		number--
-	}
-	return 'done'
-}
-
-//Define maybeTrue()
 function maybeTrue() {
   return Math.random() >= 0.5
 }
 
+var array = []
+function forLoop(array) {
+  for (let i = 0; i < 25; i++) {
+    if (i == 0) {
+      array.push("I am 1 strange loop.")
+    }
+    else {
+      array.push(`I am ${i + 1} strange loops.`)
+    }
+  }
+  return array
+}
+function whileLoop(n) {
+  while (n > 0) {
+  console.log(n)
+  n--
+  }
+  return "done"
+}
 function doWhileLoop(array) {
-	do {
-		array.pop()
-	}
-	while (array.length > 0 && maybeTrue())
-	return array
+  do {
+    array.pop()
+  }
+  while (array.length > 0 && maybeTrue())
+  return array
 }
